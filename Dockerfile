@@ -4,10 +4,10 @@ WORKDIR /
 
 COPY . .
 
-RUN apt-get update
-RUN apt-get install build-essential
-RUN apt-get install sqlite3 libsqlite3-dev
-RUN apt-get install libssl-dev
+RUN yes|apt-get update
+RUN yes|apt-get install build-essential
+RUN yes|apt-get install sqlite3 libsqlite3-dev
+RUN yes|apt-get install libssl-dev
 
 RUN cd libevent
 RUN tar -xzvf libevent-2.0.21-stable.tar.gz
