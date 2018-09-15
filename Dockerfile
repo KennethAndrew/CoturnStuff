@@ -12,7 +12,7 @@ RUN yes|apt-get install libevent-dev
 
 RUN wget http://turnserver.open-sys.org/downloads/v4.5.0.5/turnserver-4.5.0.5.tar.gz
 RUN tar -xzvf turnserver-4.5.0.5.tar.gz
-cd turnserver-4.5.0.5
+RUN cd turnserver-4.5.0.5
 RUN ./configure	
 RUN make
 RUN make install
