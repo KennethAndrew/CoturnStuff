@@ -7,7 +7,7 @@ COPY . .
 RUN chmod +x configure.bash\
 && ./configure.bash
 
-EXPOSE 80
+EXPOSE 3001
 
 
 
