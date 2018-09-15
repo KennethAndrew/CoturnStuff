@@ -34,9 +34,9 @@
  cd
 
  
-publichostname=$(curl http://169.254.169.254/latest/meta-data/public-hostname 2>/dev/null)
-publicip=$(dig +short myip.opendns.com @resolver1.opendns.com)
+#publichostname=$(curl http://169.254.169.254/latest/meta-data/public-hostname 2>/dev/null)
+#publicip=$(dig +short myip.opendns.com @resolver1.opendns.com)
 #privateip=$(hostname -I)
 
-turnserver -o -f -a -n -p 3001 -X $publicip -u user:password  -r $publichostname
+turnserver #-o -f -a -n -p 3001 -X $publicip -u user:password  -r $publichostname
 
