@@ -5,7 +5,7 @@ WORKDIR /
 COPY . .
 
 RUN chmod +x configure.bash\
-&& ./configure.bash
+RUN ./configure.bash
 
 EXPOSE 3001
 
