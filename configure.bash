@@ -21,7 +21,8 @@
  yes|apt-get install sqlite3 libsqlite3-dev
  yes|apt-get install libssl-dev
  yes|apt-get install libevent-dev
- yes|apt-get install -y wget 
+ yes|apt-get install wget
+ yes|apt-get install dnsutils 
  rm -rf /var/lib/apt/lists/*
 
  wget http://turnserver.open-sys.org/downloads/v4.5.0.5/turnserver-4.5.0.5.tar.gz
