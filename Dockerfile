@@ -1,5 +1,10 @@
 FROM ubuntu:16.04
-COPY . /app
+
+
+# Create app directory
+WORKDIR /
+
+COPY . .
 RUN chmod +x configure.bash
 RUN ./configure.bash
 
