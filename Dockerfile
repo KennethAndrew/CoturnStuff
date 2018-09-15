@@ -8,19 +8,12 @@ RUN yes|apt-get update
 RUN yes|apt-get install build-essential
 RUN yes|apt-get install sqlite3 libsqlite3-dev
 RUN yes|apt-get install libssl-dev
+RUN yes|apt-get install libevent-dev
 
-RUN cd libevent
-RUN tar -xzvf libevent-2.0.21-stable.tar.gz
-RUN cd libevent-2.0.21-stable
-RUN ./configure
-RUN make
-RUN make install
-RUN cd
-
-RUN cd coturn 
-RUN tar -xzvf coturn_4.5.0.7.orig.tar.gz
-RUN cd turnserver-4.5.0.7
-RUN ./configure
+RUN wget http://turnserver.open-sys.org/downloads/v4.5.0.5/turnserver-4.5.0.5.tar.gz
+RUN tar -xzvf turnserver-4.5.0.5.tar.gz
+cd turnserver-4.5.0.5
+RUN ./configure	
 RUN make
 RUN make install
 RUN cd
